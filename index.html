@@ -21,6 +21,7 @@
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets//css//custom.css">
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,12 +41,12 @@
 
         <!-- Navigation Bar-->
         <header id="topnav">
-            <div class="topbar-main">
+            <div class="topbar-main han-blue azure box-shadow">
                 <div class="container">
 
                     <!-- Logo container-->
                     <div class="logo">
-                        <a href="index.html" class="logo"><i class="md md-search"></i> <span>Git Find</span> </a>
+                        <a href="index.html" class="logo azure"><i class="md md-search azure"></i> <span>Git Find</span> </a>
                     </div>
                     <!-- End Logo container-->
 
@@ -53,9 +54,9 @@
 
                         <ul class="nav navbar-nav navbar-right pull-right">
                             <li>
-                                <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                     <input type="text" placeholder="Search..." class="form-control" id="search">
-                                     <a href=""><i class="fa fa-search"></i></a>
+                                <form role="search" class="navbar-left app-search pull-left azure">
+                                     <input type="text" placeholder="Search..." class="form-control azure" id="search">
+                                     <a href=""><i class="fa fa-search azure"></i></a>
                                 </form>
                             </li>
                             <li id="noti-c" class="dropdown hidden-xs">
@@ -93,18 +94,6 @@
                                 </ul>
                             </li>
                         </ul>
-
-                        <div class="menu-item">
-                            <!-- Mobile menu toggle-->
-                            <a class="navbar-toggle">
-                                <div class="lines">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </a>
-                            <!-- End mobile menu toggle-->
-                        </div>
                     </div>
 
                 </div>
@@ -159,7 +148,7 @@
                     <div class="col-sm-6 col-lg-3" id="email">
                         <div  class="widget-simple-chart text-right card-box">
                              <div class="icon-w"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                            <h3 class="text-pink">default@email.com</h3>
+                            <h3 class="azure">default@email.com</h3>
                             <p class="text-muted text-nowrap">Email Address</p>
                         </div>
                     </div>
@@ -207,9 +196,9 @@
 
                     <div class="col-lg-4">
 
-                        <div class="card-box">
+                        <div class="card-box" style="padding:0">
                         <h4 class="m-t-0 m-b-20 header-title"><b>Location</b></h4>
-                          <div id="meps"></div>
+                          <div id="meps" style="margin-top: -39px;"></div>
                         </div>
 
                     
@@ -225,8 +214,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                2016 © Minton.
+                                <span class="year"></span> © GitFind
                             </div>
+                            <script>
+                            let n=new Date();
+                            let y=n.getFullYear();
+
+                            document.querySelector(".year").innerHTML=y;
+                            </script>
                         </div>
                     </div>
                 </footer>
